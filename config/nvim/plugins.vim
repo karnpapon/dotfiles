@@ -20,6 +20,9 @@ Plug 'dense-analysis/ale'
 " management, eg.save/open workspace.
 Plug 'mhinz/vim-startify'
 
+" git integration.
+Plug 'airblade/vim-gitgutter'
+
 " natural scroll motion. 
 Plug 'yuttie/comfortable-motion.vim'
 " Use lightline to make startup time faster
