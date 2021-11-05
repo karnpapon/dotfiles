@@ -22,14 +22,11 @@ tap "homebrew/services"
 # Yarn
 brew "yarn", ignore_dependencies: true
 
-
 # NodeJS and Ruby
 brew "node", link: false
 brew "ruby"
 
 # Vim and Neovim!
-# brew "ed"
-# brew "vim"
 brew "neovim"
 
 # config ~/.config/fontconfig/conf.d to handle Powerline symbol.

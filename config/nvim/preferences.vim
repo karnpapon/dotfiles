@@ -1,8 +1,6 @@
-" Enable the use of bold fonts in dracula.
 let g:enable_bold_font = 1
 
-" Use the dracula color scheme.
-color dracula
+color codedark
 
 " Make the editor background transparent.
 hi! Normal ctermbg=NONE guibg=NONE

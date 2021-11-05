@@ -3,11 +3,12 @@
 function link_config {
    echo "Linking config/$1 -> ~/.config/$1"
 
+   # symlink `./config/nvim` folder to ~/.config
    ln -s $(pwd)/config/$1 ~/.config
 }
 
-function link_file {
-   echo "Linking config/$1 -> $2"
+# function link_file {
+#    echo "Linking config/$1 -> $2"
 
-   ln -s $(pwd)/config/$1 $2
-}
+#    ln -s $(pwd)/config/$1 $2
+# }
