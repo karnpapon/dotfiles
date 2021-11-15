@@ -39,7 +39,7 @@ Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 
 " natural scroll motion. 
-" Plug 'yuttie/comfortable-motion.vim'
+Plug 'yuttie/comfortable-motion.vim'
 
 " Use lightline to make startup time faster
 Plug 'itchyny/lightline.vim'

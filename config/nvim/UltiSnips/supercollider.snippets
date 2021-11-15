@@ -1,0 +1,28 @@
+snippet pdef_main
+(
+	Pdef(${1:\inst_name},
+		Pbind(*[
+			type: \cln,
+			snd: ${2:\sin},
+			dur: 1,
+			aux: 0,
+			out: 0,
+		]);
+	).play;
+);
+endsnippet
+
+snippet pdef_stop
+(
+	Pdef(${1:\inst_name}).stop;
+)
+endsnippet
+
+snippet insert_osc
+oscAddr: ~targetAddress,
+oscId: ${1:"osc_id_1"},
+oscSender: ~oscTransmitter
+endsnippet
+
+snippet insert_intro_note
+endsnippet

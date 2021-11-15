@@ -18,18 +18,38 @@ let g:NERDTreeIgnore = ['\.pyc$', '__pycache__']
 " Set the window width to 25 characters.
 let g:NERDTreeWinSize=25
 
-" superCollider setting.
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
-
-" default is half the terminal size for vertical and a third for horizontal
-let g:scnvim_postwin_size = 30
 
 " deoplete setting.
 let g:deoplete#enable_at_startup = 1
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
-autocmd FileType supercollider setlocal tabstop=2 softtabstop=2 shiftwidth=2
+" superCollider setting.
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
+
+" default is half the terminal size for vertical and a third for horizontal
+let g:scnvim_postwin_size = 35
+
+" the statusline is made anew
+function! s:set_sclang_statusline()
+  setlocal stl=
+  setlocal stl+=%f
+  setlocal stl+=%=
+  setlocal stl+=%(%l,%c%)
+  setlocal stl+=\ \|
+  setlocal stl+=%26.26{scnvim#statusline#server_status()}
+endfunction
+
+augroup scnvim_stl
+  autocmd!
+  autocmd FileType supercollider call <SID>set_sclang_statusline()
+augroup END
+
+" comment out stuff with this in scnvim
+autocmd FileType supercollider setlocal tabstop=2 softtabstop=2 shiftwidth=2 commentstring=//%s 
+
+" toggle colours in the post_window
+let g:scnvim_postwin_syntax_hl = 0
 
 " Rust Language Server - Config
 " Required for operations modifying multiple buffers like rename.

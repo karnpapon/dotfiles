@@ -61,7 +61,6 @@ nnoremap <leader>h :History<cr>
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <s-TAB> pumvisible() ? "\<C-p>" : "\<s-TAB>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
  
 " "" NERDTree
 " 
