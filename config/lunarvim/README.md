@@ -1,0 +1,1 @@
+put `config.lua` into `~/.config/lvim`
